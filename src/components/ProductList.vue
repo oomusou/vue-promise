@@ -19,21 +19,15 @@ export default {
       products: [],
     };
   },
-  mounted() {
-    const response = res =>
-      this.products = res.data;
-
-    const error = e =>
-      console.log(e);
-
-    const done = () =>
+  async mounted() {
+    try {
+      const response = await productApi.fetchProducts();
+      this.products = response.data;
+    } catch (err) {
+      console.log(err);
+    } finally {
       console.log('finally');
-
-    productApi
-      .fetchProducts()
-      .then(response)
-      .catch(error)
-      .finally(done);
+    }
   },
 };
 </script>
