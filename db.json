@@ -1,19 +1,19 @@
 {
-  "posts": [
+  "products": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "title": "Macbook Pro 2018",
+      "price": 89900
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "title": "iPhone XS",
+      "price": 39900
+    },
+    {
+      "id": 3,
+      "title": "iPad",
+      "price": 10900
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
